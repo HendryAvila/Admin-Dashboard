@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    /*
+    1. Use a more-intuitive box-sizing model.
+    */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    /*
+        2. Remove default margin
+    */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*
+        Typographic tweaks!
+        3. Add accessible line-height
+        4. Improve text rendering
+    */
+    body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+    /*
+        5. Improve media defaults
+    */
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+    /*
+        6. Remove built-in form typography styles
+    */
+    input, button, textarea, select {
+        font: inherit;
+    }
+    /*
+        7. Avoid text overflows
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+    /*
+        8. Create a root stacking context
+    */
+    #root, #__next {
+        isolation: isolate;
+    }
+
+    :root{
+        --aside-bg-clr:#00202e;
+        --aside-font-clr: #f0d198;
+        --header-bg-clr:#f3721c ;
+
+    }
+
+    body{
+        font-family: sans-serif;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 6fr;
+        grid-template-areas:
+        'aside header'
+        'aside main-content'
+        ;
+    }
+    /*Header section*/
+    .header{
+        background-color: var(--header-bg-clr);
+        grid-area: header;
+        
+
+    }
+    
+    .header__items-container{
+        display: grid;
+        grid-template-columns: 7fr 2.2fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 1em;
+        gap: 2em;
+    }
+    .icon-size{
+        font-size: clamp(.7em, 1.8vw, 2rem);
+    }
+    .icon-size-name{
+        font-size: clamp(.5em, 1.3vw, 1.7rem);
+        font-weight: bold;
+    }
+
+    .btn-header{
+        padding: .6rem;
+        background-color: #003f5c;
+        border-radius: 10px;
+        color: var(--aside-font-clr);
+        font-weight: bold;
+    }
+
+    .header__items-container ul{
+        display: flex;
+        gap: 1em;
+    }
+
+    
+    .header__items-search input{
+        width: 80%;
+        border: none;
+        border-radius: .8em;
+        outline: none;
+        padding: .3em;
+    }
+    .header__items-search i{
+        font-size: clamp(.7em, 1.8vw, 2rem);
+    }
+
+    .header__items-botton-left{
+        display: flex;
+    }
+    .header__items-botton-left i{
+        font-size: clamp(2em, 4vw, 6rem);
+    }
+    /*Header ends*/
+
+/*Aside Section*/
+    .aside{
+        background-color: var(--aside-bg-clr);
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 4rem;
+        color: var(--aside-font-clr);
+        padding: 1rem 1.5rem;
+
+    }
+    .aside h3{
+        font-size: clamp(1em, 2vw, 3rem);
+    }
+    .aside a{
+        color: var(--aside-font-clr);
+        text-decoration: none;
+        font-size: clamp(.7em, 1.5vw, 2rem);
+        font-weight: bold;
+        
+    }
+    .aside i{
+        font-size: clamp(.7em, 1.5vw, 2rem);
+    }
+    .aside ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0.7em;
+    }
+
+    .main-content{
+        background-color: yellow;
+        grid-area: main-content;
+
+    }
+
+    /*Aside ends*/
+
+    /*Body section*/
+
+    .main-content{
+        display: flex;
+    }
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat(2, 1fr) ;
+        border: 2px solid white;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .projects__items{
+        border: 2px solid black;
+    }
+    /*Body ends*/
