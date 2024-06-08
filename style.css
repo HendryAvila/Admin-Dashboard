@@ -226,3 +226,29 @@ body {
     font-size: clamp(.6em, 1.2vw, 1.6rem);
     font-weight: bold;
 }
+
+
+/*Media queries*/
+@media screen and (max-width: 800px) {
+    .main__right-aside{
+        display: none;
+    }
+}
+@media screen and (max-width: 630px) {
+    .header__items-botton-left{
+        display: none;
+    }
+
+    .btn-header {
+        background-color: #003f5c;
+        border-radius: 5px;
+        color: var(--aside-font-clr);
+        font-weight: bold;
+        font-size: clamp(1em, 1.4vw, 1.8rem);
+        border: none;
+        padding: .5em;
+        height: 60%;
+        display: flex;
+        align-items: center;
+    }
+}
