@@ -251,4 +251,28 @@ body {
         display: flex;
         align-items: center;
     }
+
+    .aside{
+        display: none;
+    }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__items-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .header__items-top-right{
+        order: -1;
+        justify-content: end;
+    }
+
 }
